@@ -5,4 +5,5 @@ int main(void)
 {
     char *name = "Gwen";
     greet(name);
+    dllist<int> list;
 }
