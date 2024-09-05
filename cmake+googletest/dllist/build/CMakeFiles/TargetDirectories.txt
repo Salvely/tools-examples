@@ -1,4 +1,0 @@
-E:/projects/tools/CMake/build/CMakeFiles/greet_lib.dir
-E:/projects/tools/CMake/build/CMakeFiles/dllist.dir
-E:/projects/tools/CMake/build/CMakeFiles/edit_cache.dir
-E:/projects/tools/CMake/build/CMakeFiles/rebuild_cache.dir
