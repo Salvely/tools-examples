@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.20)
+project(subdir3)
+# file(GLOB SOURCES "/*.cpp")
+add_library(${PROJECT_NAME} INTERFACE)
+target_include_directories(${PROJECT_NAME} INTERFACE ${PROJECT_SOURCE_DIR}/include)
