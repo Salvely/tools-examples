@@ -46,7 +46,7 @@ else()
     message (FATAL_ERROR "Cannot find Boost")
 endif()
 
-# apply cpp check to the project
+# apply cppcheck to the project
 # Add a custom CMake Modules directory
 set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/modules ${CMAKE_MODULE_PATH})
 find_package(CPPCHECK)
@@ -61,6 +61,11 @@ if( CPPCHECK_FOUND )
     set_target_properties(analysis PROPERTIES EXCLUDE_FROM_ALL TRUE)
     message("analysis analysis targets are ${ALL_ANALYSIS_TARGETS}")
 endif()
+
+# apply clang-format to the project
+set(CLANG_FORMAT_BIN_NAME clang-format)
+set(CLANG_FORMAT_EXCLUDE_PATTERNS  "build/" ${CMAKE_BINARY_DIR})
+find_package(CLANG_FORMAT)
 
 # install process # , SEE [HERE](https://github.com/ttroy50/cmake-examples/tree/master/01-basic/E-installing)
 # install(TARGETS cmake_example_inst_bin DESTINATION bin)
