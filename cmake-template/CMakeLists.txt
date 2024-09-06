@@ -18,12 +18,12 @@ add_library(hello_shared_lib SHARED src/hello_shared.cpp)
 # add_library(hello::shared::lib hello_shared_lib) # alias the library
 target_include_directories(hello_shared_lib PUBLIC ${PROJECT_SOURCE_DIR}/include/shared)
 
-# include subdir1
-add_subdirectory(subdir1)
-# include subdir2
-add_subdirectory(subdir2)
-# include subdir3
-add_subdirectory(subdir3)
+# # include subdir1
+# add_subdirectory(subdir1)
+# # include subdir2
+# add_subdirectory(subdir2)
+# # include subdir3
+# add_subdirectory(subdir3)
 
 add_executable(${PROJECT_NAME} ${SOURCES})
 
@@ -44,6 +44,22 @@ if(Boost_FOUND)
     target_link_libraries(${PROJECT_NAME} PRIVATE Boost::filesystem)
 else()
     message (FATAL_ERROR "Cannot find Boost")
+endif()
+
+# apply cpp check to the project
+# Add a custom CMake Modules directory
+set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/modules ${CMAKE_MODULE_PATH})
+find_package(CPPCHECK)
+# static analysis. Should be before adding subprojects
+set (ALL_ANALYSIS_TARGETS)
+add_subdirectory(subdir1)
+add_subdirectory(subdir2)
+add_subdirectory(subdir3)
+if( CPPCHECK_FOUND )
+    add_custom_target(analysis)
+    ADD_DEPENDENCIES(analysis ${ALL_ANALYSIS_TARGETS})
+    set_target_properties(analysis PROPERTIES EXCLUDE_FROM_ALL TRUE)
+    message("analysis analysis targets are ${ALL_ANALYSIS_TARGETS}")
 endif()
 
 # install process # , SEE [HERE](https://github.com/ttroy50/cmake-examples/tree/master/01-basic/E-installing)

@@ -3,3 +3,6 @@ project(subdir3)
 # file(GLOB SOURCES "/*.cpp")
 add_library(${PROJECT_NAME} INTERFACE)
 target_include_directories(${PROJECT_NAME} INTERFACE ${PROJECT_SOURCE_DIR}/include)
+# include the file with the function then call the macro
+include(${CMAKE_SOURCE_DIR}/cmake/analysis.cmake)
+add_analysis(${PROJECT_NAME} SOURCES)
