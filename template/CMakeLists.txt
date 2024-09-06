@@ -40,7 +40,7 @@ target_link_libraries(${PROJECT_NAME} PRIVATE subdir2)
 target_link_libraries(${PROJECT_NAME} PRIVATE subdir3)
 
 set(BOOST_ROOT "C:/Program Files/Boost/boost_1_84_0")
-find_package(Boost 1.46.1 REQUIRED COMPONENTS filesystem system)
+find_package(Boost 1.46.1 REQUIRED COMPONENTS filesystem system unit_test_framework)
 if(Boost_FOUND)
     message ("boost found")
     include_directories(${Boost_INCLUDE_DIRS})
@@ -69,6 +69,20 @@ endif()
 set(CLANG_FORMAT_BIN_NAME clang-format)
 set(CLANG_FORMAT_EXCLUDE_PATTERNS  "build/" ${CMAKE_BINARY_DIR})
 find_package(CLANG_FORMAT)
+
+# apply boost testing to the project 
+add_library(unit_test_lib src/reverse.cpp src/palidrome.cpp)
+target_include_directories(unit_test_lib PUBLIC ${PROJECT_SOURCE_DIR}/include/static)
+target_link_libraries(unit_test_lib PUBLIC Boost::boost)
+enable_testing()
+add_executable(unit_tests ${PROJECT_SOURCE_DIR}/test/boost_test.cpp)
+target_include_directories(unit_tests PUBLIC ${PROJECT_SOURCE_DIR}/include/static)
+target_link_libraries(unit_tests unit_test_lib Boost::unit_test_framework)
+target_compile_definitions(unit_tests
+    PRIVATE
+        BOOST_TEST_DYN_LINK
+)
+add_test(NAME test_all COMMAND unit_tests WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
 
 # install process # , SEE [HERE](https://github.com/ttroy50/cmake-examples/tree/master/01-basic/E-installing)
 # install(TARGETS cmake_example_inst_bin DESTINATION bin)
