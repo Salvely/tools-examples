@@ -71,18 +71,30 @@ set(CLANG_FORMAT_EXCLUDE_PATTERNS  "build/" ${CMAKE_BINARY_DIR})
 find_package(CLANG_FORMAT)
 
 # apply boost testing to the project 
-add_library(unit_test_lib src/reverse.cpp src/palidrome.cpp)
-target_include_directories(unit_test_lib PUBLIC ${PROJECT_SOURCE_DIR}/include/static)
-target_link_libraries(unit_test_lib PUBLIC Boost::boost)
+add_library(boost_test_lib src/reverse.cpp src/palidrome.cpp)
+target_include_directories(boost_test_lib PUBLIC ${PROJECT_SOURCE_DIR}/include/static)
+target_link_libraries(boost_test_lib PUBLIC Boost::boost)
+
 enable_testing()
 add_executable(unit_tests ${PROJECT_SOURCE_DIR}/test/boost_test.cpp)
 target_include_directories(unit_tests PUBLIC ${PROJECT_SOURCE_DIR}/include/static)
-target_link_libraries(unit_tests unit_test_lib Boost::unit_test_framework)
+target_link_libraries(unit_tests boost_test_lib Boost::unit_test_framework)
 target_compile_definitions(unit_tests
     PRIVATE
         BOOST_TEST_DYN_LINK
 )
-add_test(NAME test_all COMMAND unit_tests WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
+add_test(NAME test_boost COMMAND unit_tests WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
+
+# apply googletest to the project
+include_directories("D:/Program_Files/Git/usr/lib/googletest-distribution/include/")
+link_directories("D:/Program_Files/Git/usr/lib/googletest-distribution/lib/")
+find_package(GTest REQUIRED)
+add_executable(google_unit_tests ${PROJECT_SOURCE_DIR}/test/googletest_test.cpp)
+target_include_directories(google_unit_tests PUBLIC ${PROJECT_SOURCE_DIR}/include/static)
+target_link_libraries(google_unit_tests boost_test_lib  pthread gtest gtest_main)
+add_test(NAME test_google COMMAND google_unit_tests WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
+
+# add doxygen to the project
 
 # install process # , SEE [HERE](https://github.com/ttroy50/cmake-examples/tree/master/01-basic/E-installing)
 # install(TARGETS cmake_example_inst_bin DESTINATION bin)
@@ -90,3 +102,5 @@ add_test(NAME test_all COMMAND unit_tests WORKING_DIRECTORY ${PROJECT_SOURCE_DIR
 # Library
 # Header file
 # Config
+
+# pack the project
