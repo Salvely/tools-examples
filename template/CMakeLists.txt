@@ -95,6 +95,11 @@ target_link_libraries(google_unit_tests boost_test_lib  pthread gtest gtest_main
 add_test(NAME test_google COMMAND google_unit_tests WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
 
 # add doxygen to the project
+# add_subdirectory(bin)
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
+include(Doxygen)
+find_package(doxygen)
+Doxygen(src docs)
 
 # install process # , SEE [HERE](https://github.com/ttroy50/cmake-examples/tree/master/01-basic/E-installing)
 # install(TARGETS cmake_example_inst_bin DESTINATION bin)
