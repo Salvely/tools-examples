@@ -101,11 +101,44 @@ include(Doxygen)
 find_package(doxygen)
 Doxygen(src docs)
 
-# install process # , SEE [HERE](https://github.com/ttroy50/cmake-examples/tree/master/01-basic/E-installing)
-# install(TARGETS cmake_example_inst_bin DESTINATION bin)
-# Binaries
-# Library
-# Header file
-# Config
-
 # pack the project
+
+# set a project version
+set (deb_example_VERSION_MAJOR 0)
+set (deb_example_VERSION_MINOR 2)
+set (deb_example_VERSION_PATCH 2)
+set (deb_example_VERSION "${deb_example_VERSION_MAJOR}.${deb_example_VERSION_MINOR}.${deb_example_VERSION_PATCH}")
+
+############################################################
+# Install
+############################################################
+
+# Binaries
+install (TARGETS ${PROJECT_NAME}
+    DESTINATION bin)
+
+# # Library
+# # Note: may not work on windows
+# install (TARGETS cmake_examples_deb
+#     LIBRARY DESTINATION lib)
+
+# # Config
+# install (FILES cmake-examples.conf
+#     DESTINATION etc)
+
+############################################################
+# Create DEB
+############################################################
+
+# Tell CPack to generate a .deb package
+set(CPACK_GENERATOR "DEB")
+
+# Set a Package Maintainer.
+# This is required
+set(CPACK_DEBIAN_PACKAGE_MAINTAINER "Thom Troy")
+
+# Set a Package Version
+set(CPACK_PACKAGE_VERSION ${deb_example_VERSION})
+
+# Include CPack
+include(CPack)

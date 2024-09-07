@@ -8,3 +8,4 @@ mingw32-make format-check
 mingw32-make format-check-changed
 mingw32-make test
 mingw32-make doxygen
+mingw32-make install
