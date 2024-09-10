@@ -1,6 +1,16 @@
 # Project Name
 
-> Short blurb about what your product does.
+- [Project Name](#project-name)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Usage example](#usage-example)
+  - [Development setup](#development-setup)
+  - [Release History](#release-history)
+  - [Meta](#meta)
+  - [Contributing](#contributing)
+  - [Contributors](#contributors)
+  - [Contact](#contact)
+  - [License](#license)
 
 <!--- These are examples. See https://shields.io for others or to customize this set of shields. You might want to include dependencies, project status and licence info here --->
 
@@ -13,13 +23,13 @@
 ![GitHub forks](https://img.shields.io/github/forks/scottydocs/README-template.md?style=social)
 ![Twitter Follow](https://img.shields.io/twitter/follow/scottydocs?style=social)
 
+> Short blurb about what your product does.
+
 Project name is a `<utility/tool/feature>` that allows `<insert_target_audience>` to do `<action/task_it_does>`.
 
 Additional line of information text about what the project does. Your introduction should be around 2 or 3 sentences. Don't go overboard, people won't read it.
 
 One to two paragraph statement about your product and what it does.
-
-![](header.png)
 
 ## Prerequisites
 
@@ -99,7 +109,7 @@ To contribute to <project_name>, follow these steps:
 4. Push to the branch (`git push origin feature/fooBar`)
 5. Create a new Pull Request
 
-or 
+or
 
 1. Fork this repository.
 2. Create a branch: `git checkout -b <branch_name>`.
@@ -108,13 +118,14 @@ or
 5. Create the pull request.
 
 Alternatively see the GitHub documentation on [creating a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+
 ## Contributors
 
 Thanks to the following people who have contributed to this project:
 
-* [@scottydocs](https://github.com/scottydocs) 📖
-* [@cainwatson](https://github.com/cainwatson) 🐛
-* [@calchuchesta](https://github.com/calchuchesta) 🐛
+- [@scottydocs](https://github.com/scottydocs) 📖
+- [@cainwatson](https://github.com/cainwatson) 🐛
+- [@calchuchesta](https://github.com/calchuchesta) 🐛
 
 You might want to consider using something like the [All Contributors](https://github.com/all-contributors/all-contributors) specification and its [emoji key](https://allcontributors.org/docs/en/emoji-key).
 
@@ -123,12 +134,13 @@ You might want to consider using something like the [All Contributors](https://g
 If you want to contact me you can reach me at <your_email@address.com>.
 
 ## License
+
 <!--- If you're not sure which open license to use see https://choosealicense.com/--->
 
-This project uses the following license: [<license_name>](<link>).
+This project uses the following license: [<license_name>](link).
 
 <!-- Markdown link & img dfn's -->
-
+d
 [npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/datadog-metrics
 [npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square
