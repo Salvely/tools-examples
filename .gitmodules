@@ -1,0 +1,3 @@
+[submodule "README_template/README-template.md"]
+	path = README_template/README-template.md
+	url = https://github.com/scottydocs/README-template.md.git
