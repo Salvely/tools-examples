@@ -1,0 +1,28 @@
+name: Cpp project autobuild
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Project
+        uses: actions/checkout@v4.1.7
+      - name: CMake Action
+        uses: threeal/cmake-action@v2.0.0
+        with:
+          generator: "MinGW Makefiles"
+      - name: Analysis
+        run: ming32-make analysis
+      - name: Format the code
+        run: mingw32-make format && mingw32-make format-check && mingw32-make format-check-changed
+      - name: Test
+        run: mingw32-make test
+      - name: Generate the doc
+        run: mingw32-make doxygen
+      - name: Install the project
+        run: mingw32-make install
