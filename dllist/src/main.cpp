@@ -1,9 +1,9 @@
-#include <iostream>
 #include "greet.h"
-#include "dllist.hpp"
-int main(void)
-{
-    char *name = "Gwen";
+#include "static/dllist.hpp"
+#include <iostream>
+
+int main(void) {
+    char* name = "Gwen";
     greet(name);
     dllist<int> list;
 }

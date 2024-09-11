@@ -1,12 +1,21 @@
 [submodule "README_template/README-template.md"]
-	path = README_template/README-template.md
-	url = https://github.com/scottydocs/README-template.md.git
+path = README_template/README-template.md
+url = https://github.com/scottydocs/README-template.md.git
 [submodule "README_template/Readme-Templates"]
-	path = README_template/Readme-Templates
-	url = https://github.com/Fernanda-Kipper/Readme-Templates.git
+path = README_template/Readme-Templates
+url = https://github.com/Fernanda-Kipper/Readme-Templates.git
 [submodule "README_template/readme-template"]
-	path = README_template/readme-template
-	url = https://github.com/dbader/readme-template
+path = README_template/readme-template
+url = https://github.com/dbader/readme-template
 [submodule "README_template/Best-README-Template"]
-	path = README_template/Best-README-Template
-	url = https://github.com/othneildrew/Best-README-Template.git
+path = README_template/Best-README-Template
+url = https://github.com/othneildrew/Best-README-Template.git
+[submodule "README_template/ModernCppStarter"]
+path = README_template/ModernCppStarter
+url = https://github.com/TheLartians/ModernCppStarter.git
+[submodule "ModernCppStarter"]
+	path = ModernCppStarter
+	url = https://github.com/TheLartians/ModernCppStarter.git
+[submodule "github_actions_example"]
+	path = github_actions_example
+	url = https://github.com/Salvely/github_actions_example

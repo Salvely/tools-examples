@@ -140,7 +140,7 @@ If you want to contact me you can reach me at <your_email@address.com>.
 This project uses the following license: [<license_name>](link).
 
 <!-- Markdown link & img dfn's -->
-d
+
 [npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/datadog-metrics
 [npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square

@@ -107,7 +107,7 @@ this is a `CMake` example with `googletest` unit testing framework.
 
 #### [github actions examples](./github_actions_example/)
 
-this is a `CMake` example with `github actions` replacing the `run.sh` in the `cmake_example`
+this is a `CMake` example with `github actions` to auto build the project in the `cmake_example`.
 
 #### [README template](./README_template/)
 
@@ -149,10 +149,10 @@ this is a `dllist` project using the [ModernCppStarter](./ModernCppStarter/).
 - [x] googletest unit testing framework examples
 - [x] README.md template written
 - [x] README.md finished
-- [ ] add README.md to the cmake_example
-- [ ] learn github actions
+- [x] learn some github actions
 - [ ] add github actions to the cmake_example
-- [ ] build a cmake template
+- [ ] add README.md to the cmake_example
+- [ ] build a cmake template from [cmake_example](./cmake_example/)
 - [ ] apply the cmake template into `dllist` project
 - [ ] get familiar with the [ModernCppStarter](https://github.com/TheLartians/ModernCppStarter.git)
 - [ ] configure the `dllist` project with the [ModernCppStarter template](https://github.com/TheLartians/ModernCppStarter.git)
