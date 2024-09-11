@@ -19,3 +19,6 @@ url = https://github.com/TheLartians/ModernCppStarter.git
 [submodule "github_actions_example"]
 	path = github_actions_example
 	url = https://github.com/Salvely/github_actions_example
+[submodule "modern-cpp-template"]
+	path = modern-cpp-template
+	url = https://github.com/Salvely/modern-cpp-template

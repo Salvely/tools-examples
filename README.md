@@ -54,6 +54,7 @@ Tools examples in this project include:
 
 ### Tools needed
 
+- `Mingw-w64` or `Mingw`
 - `CMake`
 - `vscode`
 - `clang-format`
@@ -99,15 +100,23 @@ this is a `CMake` example project with :
 
 #### [boost unit testing example](./boost_test_example/)
 
-this is a `CMake` example with `boost` unit testing framework.
+> [!TIP]
+>
+> Change the path of `boost` to your boost library on your computer.
+
+this is a `CMake` example with `boost` unit testing framework. `Boost` installled locally, with no `github actions` CI/CD.
 
 #### [googletest unit testing examples](./googletest_test_example/)
 
-this is a `CMake` example with `googletest` unit testing framework.
+> [!TIP]
+>
+> Change the path of `googletest` to the local library on your computer.
+
+this is a `CMake` example with `googletest` unit testing framework. `googletest` installled locally, with no `github` actions` CI/CD.
 
 #### [github actions examples](./github_actions_example/)
 
-this is a `CMake` example with `github actions` to auto build the project in the `cmake_example`.
+this is a `CMake` example with `github actions` to auto build the project in the `cmake_example`. Using the tool [cmake-action](https://github.com/marketplace/actions/cmake-action)
 
 #### [README template](./README_template/)
 
@@ -150,9 +159,9 @@ this is a `dllist` project using the [ModernCppStarter](./ModernCppStarter/).
 - [x] README.md template written
 - [x] README.md finished
 - [x] learn some github actions
+- [ ] build a cmake template from [cmake_example](./cmake_example/)
 - [ ] add github actions to the cmake_example
 - [ ] add README.md to the cmake_example
-- [ ] build a cmake template from [cmake_example](./cmake_example/)
 - [ ] apply the cmake template into `dllist` project
 - [ ] get familiar with the [ModernCppStarter](https://github.com/TheLartians/ModernCppStarter.git)
 - [ ] configure the `dllist` project with the [ModernCppStarter template](https://github.com/TheLartians/ModernCppStarter.git)
