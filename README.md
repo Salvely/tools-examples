@@ -140,6 +140,10 @@ this is a `dllist` project using the [ModernCppStarter](./ModernCppStarter/).
 
 ## Roadmap
 
+> [!NOTE]
+>
+> A docker file may be add to the project, so that cppcheck successfully run.
+
 - [x] basic cmake example project with unit testing
 - [x] dllist implementation
 - [x] cmake example subproject configuration
@@ -161,12 +165,9 @@ this is a `dllist` project using the [ModernCppStarter](./ModernCppStarter/).
 - [x] learn some github actions
 - [x] build a cmake template from [cmake_example](./cmake_example/)
 - [x] add github actions to the cmake_example
-- [ ] add README.md to the cmake_example
-- [ ] apply the cmake template into `dllist` project
-- [ ] get familiar with the [ModernCppStarter](https://github.com/TheLartians/ModernCppStarter.git)
-- [ ] configure the `dllist` project with the [ModernCppStarter template](https://github.com/TheLartians/ModernCppStarter.git)
-- [ ] refine the project template
-- [ ] publish the project template
+- [x] add README.md to the cmake_example
+- [x] refine the project template
+- [x] publish the project template
 
 ## Contributing
 
