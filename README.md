@@ -159,8 +159,8 @@ this is a `dllist` project using the [ModernCppStarter](./ModernCppStarter/).
 - [x] README.md template written
 - [x] README.md finished
 - [x] learn some github actions
-- [ ] build a cmake template from [cmake_example](./cmake_example/)
-- [ ] add github actions to the cmake_example
+- [x] build a cmake template from [cmake_example](./cmake_example/)
+- [x] add github actions to the cmake_example
 - [ ] add README.md to the cmake_example
 - [ ] apply the cmake template into `dllist` project
 - [ ] get familiar with the [ModernCppStarter](https://github.com/TheLartians/ModernCppStarter.git)
