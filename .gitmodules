@@ -25,3 +25,6 @@ url = https://github.com/TheLartians/ModernCppStarter.git
 [submodule "cpp_doctest/doctest"]
 	path = cpp_doctest/doctest
 	url = https://github.com/doctest/doctest.git
+[submodule "dllist"]
+	path = dllist
+	url = https://github.com/Salvely/dllist-with-modernCppStarter
