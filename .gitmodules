@@ -22,3 +22,6 @@ url = https://github.com/TheLartians/ModernCppStarter.git
 [submodule "modern-cpp-template"]
 	path = modern-cpp-template
 	url = https://github.com/Salvely/modern-cpp-template
+[submodule "cpp_doctest/doctest"]
+	path = cpp_doctest/doctest
+	url = https://github.com/doctest/doctest.git
