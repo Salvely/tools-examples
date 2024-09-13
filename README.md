@@ -16,6 +16,7 @@
       - [dllist with simple template](#dllist-with-simple-template)
       - [ModernCppStarter](#moderncppstarter)
       - [dllist with modern cpp template](#dllist-with-modern-cpp-template)
+      - [cpp\_doctest](#cpp_doctest)
   - [Roadmap](#roadmap)
   - [Contributing](#contributing)
   - [Contact](#contact)
@@ -138,6 +139,10 @@ this directory links to an awesome modern cpp template.
 
 this is a `dllist` project using the [ModernCppStarter](./ModernCppStarter/).
 
+#### [cpp_doctest](./cpp_doctest/)
+
+this is a C++ doctest unit testing framework learning example, combinbed `doctest` with `CMake`.
+
 ## Roadmap
 
 > [!NOTE]
@@ -168,6 +173,7 @@ this is a `dllist` project using the [ModernCppStarter](./ModernCppStarter/).
 - [x] add README.md to the cmake_example
 - [x] refine the project template
 - [x] publish the project template
+- [x] add `doctest` example
 
 ## Contributing
 
